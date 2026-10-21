@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d18">
+  <title>Trendix | داشبورد بازار کریپتو</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+    :root{color-scheme:dark;--bg:#080d18;--panel:#101827;--panel2:#0c1422;--line:#202c40;--muted:#8d9bb2;--text:#eef4ff;--cyan:#00e4ff;--green:#37d69a;--red:#ff667d}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 82% -15%,#123147 0,transparent 40%),var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;min-height:100vh}
+    a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+    header{height:82px;border-bottom:1px solid #ffffff0c;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(140deg,#00e4ff,#1e8eaa);display:grid;place-items:center;color:#06121b;font-size:23px;font-weight:900;box-shadow:0 0 28px #00e4ff25}
+    .brand-name{font-size:22px;font-weight:800;letter-spacing:.4px;direction:ltr}.brand-name span{color:var(--cyan)}.subbrand{font-size:11px;color:var(--muted);margin-top:-3px}
+    .live{display:flex;align-items:center;gap:8px;border:1px solid #26374a;background:#0d1726;border-radius:30px;padding:9px 13px;color:#c7d3e5;font-size:12px}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 10px var(--green)}
+    main{padding:40px 0 56px}.hero{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-bottom:30px}.eyebrow{font-size:12px;color:var(--cyan);font-weight:700;letter-spacing:.4px}.hero h1{font-size:clamp(27px,4vw,42px);line-height:1.35;margin:9px 0 10px;font-weight:800;letter-spacing:-1px}.hero h1 span{color:var(--cyan)}.hero p{color:var(--muted);margin:0;max-width:570px;line-height:2;font-size:14px}
+    .hero-mark{width:145px;height:145px;flex-shrink:0;border:1px solid #00e4ff35;border-radius:35px;display:grid;place-items:center;transform:rotate(8deg);background:linear-gradient(145deg,#10263a,#0b1422);box-shadow:inset 0 0 35px #00e4ff0b,0 20px 60px #0003}.hero-mark div{transform:rotate(-8deg);font-size:66px;font-weight:800;color:var(--cyan);text-shadow:0 0 35px #00e4ff55}
+    .section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:32px 0 16px}.section-head h2{font-size:17px;margin:0;font-weight:700}.muted{font-size:12px;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.coin{position:relative;overflow:hidden;background:linear-gradient(145deg,#111d2e,#0c1421);border:1px solid var(--line);border-radius:20px;padding:22px;min-width:0;transition:transform .2s,border-color .2s}.coin:hover{transform:translateY(-3px);border-color:#00e4ff55}.coin:after{content:"";position:absolute;top:-45px;left:-45px;width:110px;height:110px;background:#00e4ff09;border-radius:50%;pointer-events:none}
+    .coin-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.coin-id{display:flex;align-items:center;gap:11px}.coin-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:22px;font-weight:800;background:#172235}.btc{color:#f7a600}.eth{color:#9daeff}.sol{color:#8e7cff}.coin-name{font-weight:700;font-size:14px}.ticker{font-size:11px;color:var(--muted);direction:ltr;text-align:right}.change{font-size:12px;border-radius:9px;padding:6px 8px;font-weight:700;direction:ltr}.positive{color:var(--green);background:#37d69a13}.negative{color:var(--red);background:#ff667d13}.price-label{font-size:11px;color:var(--muted);margin-top:23px}.price{font-size:clamp(21px,2.6vw,29px);font-weight:800;letter-spacing:-.5px;direction:ltr;text-align:right;margin:5px 0 17px;white-space:nowrap}.mini-stats{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #ffffff0c;padding-top:15px}.stat-label{font-size:10px;color:var(--muted);margin-bottom:5px}.stat-value{font-size:12px;direction:ltr;font-weight:600}
+    .actions{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:28px}.action-card{border-radius:20px;border:1px solid var(--line);background:var(--panel);padding:23px;display:flex;align-items:center;justify-content:space-between;gap:15px}.action-card.primary{background:linear-gradient(120deg,#0e2b3b,#101827 70%);border-color:#00e4ff35}.action-title{font-weight:700;font-size:15px;margin-bottom:6px}.action-desc{font-size:12px;color:var(--muted);line-height:1.9}.action-icon{font-size:25px;margin-left:9px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:12px;padding:12px 17px;font-family:inherit;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;transition:.2s}.btn-primary{background:var(--cyan);color:#04121b;box-shadow:0 8px 25px #00e4ff19}.btn-primary:hover{background:#6df0ff;transform:translateY(-1px)}.btn-secondary{border:1px solid #34445b;color:#e1eaff;background:#131e2e}.btn-secondary:hover{border-color:var(--cyan)}
+    .status-row{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px;margin-top:22px}.status-row .dot{width:6px;height:6px}.refresh{background:none;border:0;color:var(--cyan);font-family:inherit;cursor:pointer;font-size:12px}
+    footer{border-top:1px solid #ffffff0c;padding:22px 0;color:#75849b;font-size:11px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.foot-brand{direction:ltr;font-weight:800;color:#c9d7e8}
+    .notice{display:none;border:1px solid #634b2c;background:#281e12;color:#ffd99d;padding:12px 15px;border-radius:12px;margin-top:14px;font-size:12px;line-height:1.8}
+    @media(max-width:760px){.hero-mark{width:95px;height:95px;border-radius:25px}.hero-mark div{font-size:45px}.cards{grid-template-columns:1fr}.coin{padding:19px}.price{font-size:28px}.actions{grid-template-columns:1fr}.hero{align-items:flex-start}.hero p{font-size:13px}.section-head{margin-top:26px}}
+    @media(max-width:430px){.wrap{padding:0 15px}header{height:72px}.live{font-size:10px;padding:8px}.brand-name{font-size:20px}.hero-mark{display:none}.hero h1{font-size:30px}.action-card{align-items:flex-start;flex-direction:column}.action-card .btn{width:100%}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+    <a class="brand" href="/" aria-label="Trendix home"><div class="logo">T</div><div><div class="brand-name">TREND<span>IX</span></div><div class="subbrand">Crypto Intelligence Dashboard</div></div></a>
+    <div class="live"><span class="dot"></span><span>بازار زنده</span><span style="color:#60728c">•</span><span>Spot / USDT</span></div>
+  </div></header>
+  <main class="wrap">
+    <section class="hero">
+      <div><div class="eyebrow">MARKET OVERVIEW / 01</div><h1>بازار رو هوشمندتر<br><span>دنبال کن.</span></h1><p>داشبورد ترندیکس برای بررسی سریع بازار بیت‌کوین، اتریوم و سولانا؛ با قیمت‌های زنده از بایننس و دسترسی مستقیم به تحلیل روزانه ربات.</p></div>
+      <div class="hero-mark" aria-hidden="true"><div>T</div></div>
+    </section>
+    <div class="section-head"><h2>نمای کلی بازار</h2><button class="refresh" id="refreshBtn">↻ بروزرسانی قیمت‌ها</button></div>
+    <section class="cards" id="coinCards" aria-live="polite">
+      <article class="coin"><div class="muted">در حال دریافت قیمت‌ها از بایننس…</div></article>
+      <article class="coin"><div class="muted">در حال دریافت قیمت‌ها از بایننس…</div></article>
+      <article class="coin"><div class="muted">در حال دریافت قیمت‌ها از بایننس…</div></article>
+    </section>
+    <div class="notice" id="errorNotice"></div>
+    <section class="actions">
+      <div class="action-card primary"><div><div class="action-title"><span class="action-icon">✦</span>تحلیل روزانه Trendix</div><div class="action-desc">برای دریافت تحلیل و سناریوهای بازار، وارد ربات تلگرام ترندیکس شو.</div></div><a class="btn btn-primary" href="https://t.me/Trendix8Bot" target="_blank" rel="noopener noreferrer">باز کردن ربات تلگرام <span>↗</span></a></div>
+      <div class="action-card"><div><div class="action-title"><span class="action-icon">◷</span>آخرین بروزرسانی</div><div class="action-desc" id="updatedAt">هنوز داده‌ای دریافت نشده است.</div></div><button class="btn btn-secondary" id="retryBtn">دریافت دوباره</button></div>
+    </section>
+    <div class="status-row"><span class="dot"></span><span>منبع قیمت: Binance Spot API</span><span>•</span><span>بروزرسانی خودکار هر ۳۰ ثانیه</span></div>
+  </main>
+  <footer class="wrap"><span>این داشبورد صرفاً جهت اطلاع‌رسانی است و توصیه مالی محسوب نمی‌شود.</span><span class="foot-brand">TRENDIX © 2026</span></footer>
+<script>
+const META = {
+  BTCUSDT: {name:"بیت‌کوین", ticker:"BTC", icon:"₿", cls:"btc"},
+  ETHUSDT: {name:"اتریوم", ticker:"ETH", icon:"◆", cls:"eth"},
+  SOLUSDT: {name:"سولانا", ticker:"SOL", icon:"◎", cls:"sol"}
+};
+const $ = (id) => document.getElementById(id);
+const number = (value, max=2) => new Intl.NumberFormat("en-US",{maximumFractionDigits:max}).format(value);
+const money = (value) => "$" + new Intl.NumberFormat("en-US",{minimumFractionDigits:2,maximumFractionDigits:value < 1 ? 5 : 2}).format(value);
+function render(data) {
+  $("coinCards").innerHTML = data.assets.map(asset => {
+    const meta = META[asset.symbol] || {name:asset.symbol,ticker:asset.symbol,icon:"◈",cls:""};
+    const up = asset.changePercent >= 0;
+    return `<article class="coin">
+      <div class="coin-top"><div class="coin-id"><div class="coin-icon ${meta.cls}">${meta.icon}</div><div><div class="coin-name">${meta.name}</div><div class="ticker">${meta.ticker} / USDT</div></div></div>
+      <div class="change ${up?"positive":"negative"}">${up?"▲":"▼"} ${Math.abs(asset.changePercent).toFixed(2)}%</div></div>
+      <div class="price-label">قیمت فعلی</div><div class="price">${money(asset.price)}</div>
+      <div class="mini-stats"><div><div class="stat-label">بیشترین ۲۴ ساعت</div><div class="stat-value">${money(asset.high)}</div></div><div style="text-align:left"><div class="stat-label">کمترین ۲۴ ساعت</div><div class="stat-value">${money(asset.low)}</div></div></div>
+    </article>`;
+  }).join("");
+  $("updatedAt").textContent = "آخرین دریافت: " + new Date(data.updatedAt).toLocaleTimeString("fa-IR",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
+  $("errorNotice").style.display = "none";
+}
+async function loadPrices() {
+  const buttons = [$("refreshBtn"), $("retryBtn")];
+  buttons.forEach(b => b.disabled = true);
+  try {
+    const response = await fetch("/api/prices", {cache:"no-store"});
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const data = await response.json();
+    if (!Array.isArray(data.assets) || !data.assets.length) throw new Error("No market data");
+    render(data);
+  } catch (error) {
+    $("errorNotice").textContent = "فعلاً دریافت قیمت ممکن نشد. اتصال اینترنت و دسترسی به API بایننس را بررسی کن؛ چند لحظه دیگر دوباره تلاش می‌کنیم.";
+    $("errorNotice").style.display = "block";
+    console.error(error);
+  } finally { buttons.forEach(b => b.disabled = false); }
+}
+$("refreshBtn").addEventListener("click", loadPrices);
+$("retryBtn").addEventListener("click", loadPrices);
+loadPrices();
+setInterval(loadPrices, 30000);
+</script>
+</body>
+</html>
